@@ -1,0 +1,98 @@
+/*
+<div class="col"><div class="form-group"><label for="children">Do you have children?</label><select class="form-control" id="children" name="children"><option value="yes" {
+        {
+        old('children')==='yes' ? 'selected': ''
+    }
+}
+
+>Yes</option><option value="no" {
+        {
+        old('children')==='no' ? 'selected': ''
+    }
+}
+
+>No</option></select>@error('children') <div class="text-danger"> {
+        {
+        $message
+    }
+}
+
+</div>@enderror </div></div>< !-- Start --><div class="row"><div class="col-md-4"><div class="form-group"><label for="under5">Number of Children Under 5:</label><input type="number" name="under5" id="under5" class="form-control" value="{{ old('under5', 0) }}" {
+        {
+        old('children')==='no' ? 'disabled': ''
+    }
+}
+
+/>@error('under5') <div class="text-danger"> {
+        {
+        $message
+    }
+}
+
+</div>@enderror </div></div><div class="col-md-4"><div class="form-group"><label for="children6to11">Number of Children Aged 6 to 11:</label><input type="number" name="children6to11" id="children6to11" class="form-control" value="{{ old('children6to11', 0) }}" {
+        {
+        old('children')==='no' ? 'disabled': ''
+    }
+}
+
+/>@error('children6to11') <div class="text-danger"> {
+        {
+        $message
+    }
+}
+
+</div>@enderror </div></div><div class="col-md-4"><div class="form-group"><label for="children12to18">Number of Children Aged 12 to 18:</label><input type="number" name="children12to18" id="children12to18" class="form-control" value="{{ old('children12to18', 0) }}" {
+        {
+        old('children')==='no' ? 'disabled': ''
+    }
+}
+
+/>@error('children12to18') <div class="text-danger"> {
+        {
+        $message
+    }
+}
+
+</div>@enderror </div></div></div>
+
+
+
+<script>document.addEventListener('DOMContentLoaded', function() {
+        var childrenSelect=document.getElementById('children');
+        var under5Input=document.getElementById('under5');
+        var children6to11Input=document.getElementById('children6to11');
+        var children12to18Input=document.getElementById('children12to18');
+
+        // Set initial visibility and required attribute
+        setChildFieldsVisibility(childrenSelect.value==='yes');
+        setChildFieldsRequired(childrenSelect.value==='yes');
+
+        // Add event listener to the children select
+        childrenSelect.addEventListener('change', function() {
+                var hasChildren=this.value==='yes';
+
+                // Toggle visibility and required attribute
+                setChildFieldsVisibility(hasChildren);
+                setChildFieldsRequired(hasChildren);
+            });
+
+        // Function to toggle visibility of child-related fields
+        function setChildFieldsVisibility(show) {
+            under5Input.style.display=show ? 'block' : 'none';
+            children6to11Input.style.display=show ? 'block' : 'none';
+            children12to18Input.style.display=show ? 'block' : 'none';
+        }
+
+        // Function to toggle required attribute of child-related fields
+        function setChildFieldsRequired(required) {
+            under5Input.required=required;
+            children6to11Input.required=required;
+            children12to18Input.required=required;
+        }
+    });
+
+</script>
+
+
+
+*/
