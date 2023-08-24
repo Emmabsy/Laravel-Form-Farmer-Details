@@ -1,4 +1,4 @@
-# Farmer Details System with using Laravel,htmls,CSS,Bootsrap and MySQL
+# Form for CAPTURING farm Details with using Laravel,htmls,CSS,Bootsrap and MySQL
 
 <img src="./public/images/page1.png" alt="">
 <img src="./public/images/page3.png" alt="">
