@@ -1,8 +1,8 @@
 # Farmer Details System with using Laravel,htmls,CSS,Bootsrap and MySQL
 
-<img src="./public/images/Plum1.png" alt="">
-<img src="./public/images/plum2.png" alt="">
-<img src="./public/images/plum4.png" alt="">
+<img src="./public/images/page1.png" alt="">
+<img src="./public/images/page2.png" alt="">
+<img src="./public/images/page4.png" alt="">
 
 
 A user authentication and authorization system with different user roles (admin and user) built using Laravel, and MySQL. This project provides a foundation for creating secure web applications with role-based access control.
